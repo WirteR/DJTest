@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block content %}
+<p>Лабораторні</p>
+Лаба 1
+<ol>
+    <li><a href="{% url 'l1one' %}">Завдання 1</a></li>
+    <li><a href="{% url 'l1two' %}">Завдання 2</a></li>
+   </ol>
+<br>
+Лаба 2
+<ol>
+    <li><a href="{% url 'l2one' %}">Завдання 1</a></li>
+    <li><a href="{% url 'l2two' %}">Завдання 2</a></li>
+   </ol>
+
+{% endblock %}
