@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% block content%}
+<section id="bc" class="mt-3">
+        <div class="container">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="{% url 'test' %}">
+                  <i class="fas"></i> Лаба 1 </a>
+              </li>
+              <li class="breadcrumb-item active"> Лаба 2</li>
+                <li class="breadcrumb-item">
+                <a href="{% url 'test3' %}">
+                  <i class="fas"></i> Лаба 3 </a>
+              </li>
+                <li class="breadcrumb-item">
+                <a href="{% url 'test4' %}">
+                  <i class="fas"></i> Лаба 4 </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+<p><strong>Завдання 1</strong></p>
+<form action="{% url 'test2' %}">
+                  <!-- Form Row 1 -->
+                    <div class="col-md-4 mb-3">
+                      <p>
+                          Input string:<br>
+                        <input type="text" name="str" class="form-control" placeholder="string" value="{{ values.str }}">
+                      </p>
+                    </div>
+                      <br>
+                      <div class="col-md-4 mb-3">
+                          <p>
+                            Result: <br>
+                            <output name="result">{{ result }}</output>
+                          </p>
+                      </div>
+            <button class="btn btn-secondary" type="submit">Submit form</button>
+</form>
+<br>    <br>
+
+<p><strong>Завдання 2</strong></p>
+<form action="{% url 'test2' %}">
+                  <!-- Form Row 1 -->
+                    <div class="col-md-4 mb-3">
+                      <p>
+                          Input string:<br>
+                        <input type="text" name="str1" class="form-control" placeholder="string" value="{{ values.str1 }}">
+                      </p>
+                    </div>
+                      <br>
+                      <div class="col-md-4 mb-3">
+                          <p>
+                            Result: <br>
+                            <output name="result">{{ resul }}</output>
+                          </p>
+                      </div>
+            <button class="btn btn-secondary" type="submit">Submit form</button>
+</form>
+<br>    <br>
+
+<p><strong>Завдання 3</strong></p>
+<form action="{% url 'test2' %}">
+                  <!-- Form Row 1 -->
+                    <div class="col-md-4 mb-3">
+                      <p>
+                          Input string:<br>
+                        <input type="text" name="str2" class="form-control" placeholder="string" value="{{ values.str2 }}">
+                      </p>
+                    </div>
+                      <br>
+                      <div class="col-md-4 mb-3">
+                          <p>
+                            Result: <br>
+                            <output name="result">{{ result1 }}</output>
+                          </p>
+                      </div>
+            <button class="btn btn-secondary" type="submit">Submit form</button>
+</form>
+<br>    <br>
+{% endblock %}

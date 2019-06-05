@@ -57,6 +57,19 @@
                         {% endfor%}
                       </select>
                     </div>
+
+                      <div class="col-md-6 mb-3">
+                  <select name="sorting" class="form-control">
+                      <option selected="true" disabled="disabled">Sorting</option>
+                      {% for key,value in sorting_choices.items %}
+                        <option value="{{ key }}"
+                          {% if key == values.sorting %}
+                            selected
+                          {% endif %}>
+                        {{ value }}</option>
+                      {% endfor %}
+                  </select>
+                  </div>
                   </div>
                   <button class="btn btn-secondary btn-block mt-4" type="submit">Submit form</button>
                 </form>

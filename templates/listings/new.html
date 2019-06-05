@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% block content%}
+<section id="bc" class="mt-3">
+        <div class="container">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item active"> Лаба 1</li>
+                <li class="breadcrumb-item">
+                <a href="{% url 'test2' %}">
+                  <i class="fas"></i> Лаба 2 </a>
+              </li>
+                <li class="breadcrumb-item">
+                <a href="{% url 'test3' %}">
+                  <i class="fas"></i> Лаба 3 </a>
+              </li>
+                <li class="breadcrumb-item">
+                <a href="{% url 'test4' %}">
+                  <i class="fas"></i> Лаба 4 </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+<br>
+<p><strong>Завдання 1</strong></p>
+<form action="{% url 'test' %}">
+    <br>
+                  <!-- Form Row 1 -->
+                    <div class="col-md-4 mb-3">
+                      <p>
+                          Input x:<br>
+                        <input type="text" name="val1" class="form-control" placeholder="value 1" value="{{ values.val1 }}">
+                      </p>
+                    </div>
+                      <br>
+                      <div class="col-md-4 mb-3">
+                          <p>
+                            Result: <br>
+                            <output name="result">{{ result }}</output>
+                          </p>
+                      </div>
+            <button class="btn btn-secondary" type="submit">Submit form</button>
+</form>
+<br>
+
+<p><strong>Завдання 2</strong></p>
+<form action="{% url 'test' %}">
+                  <!-- Form Row 1 -->
+                    <div class="col-md-4 mb-3">
+                      <p>
+                          Input osnova 1:<br>
+                        <input type="text" name="osn1" class="form-control" placeholder="osnova 1" value="{{ values.osn1 }}">
+                      </p>
+                    </div>
+                      <br>
+                    <div class="col-md-4 mb-3">
+                      <p>
+                          Input osnova 2:<br>
+                        <input type="text" name="osn2" class="form-control" placeholder="osnova 2" value="{{ values.osn2 }}">
+                      </p>
+                    </div>
+                    <br>
+                    <div class="col-md-4 mb-3">
+                      <p>
+                          Input stor 1:<br>
+                        <input type="text" name="stor1" class="form-control" placeholder="stor 1" value="{{ values.stor1 }}">
+                      </p>
+                    </div>
+                      <br>
+                    <div class="col-md-4 mb-3">
+                      <p>
+                          Input stor 2:<br>
+                        <input type="text" name="stor2" class="form-control" placeholder="stor 2" value="{{ values.stor2 }}">
+                      </p>
+                    </div>
+                      <br>
+                      <div class="col-md-4 mb-3">
+                          <p>
+                            Result: <br>
+                            <output name="result">{{ resul }}</output>
+                          </p>
+                      </div>
+            <button class="btn btn-secondary" type="submit">Submit form</button>
+</form>
+{% endblock %}

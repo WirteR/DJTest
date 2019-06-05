@@ -83,3 +83,10 @@ state_choices = {
         'WV': 'West Virginia',
         'WY': 'Wyoming'
 }
+
+sorting_choices = {
+    'price_by_raising': 'Price by raising',
+    'price_by_down': 'Price by down',
+    'older_first': 'Older first',
+    'new_first': 'New first'
+}
